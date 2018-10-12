@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row justify-content-center text-center">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Agregar: </h1>
+      <%= form_for @product do |f| %>
+       <div class="form-group">
+         <%= f.text_field :name, class: "form-control input-lg", placeholder: "Ingresa el nombre de tú producto" %>
+       </div>
+       <div class="form-group">
+         <%= f.text_field :url, class: "form-control input-lg", placeholder: "Pega la url de tú producto" %>
+       </div>
+       <div class="form-group">
+         <%= f.text_area :description, class: "form-control input-lg", placeholder: "Qué hace único a tú producto?" %>
+       </div>
+       <div>
+         <%= f.submit "Agregar", class: "btn btn-primary btn-lg btn-block" %>
+       </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>

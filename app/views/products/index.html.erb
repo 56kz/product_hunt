@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div>
+        <%= link_to "Publicar Producto", new_product_path, class: "btn btn-primary" %>
+      </div>
+     <table class="table">
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>URL</th>
+        <th>Descripcion</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% @products.each do |p| %>
+      <tr>
+        <th><%= p.id %></th>
+        <th><%= p.name %></th>
+        <th><%= p.url %></th>
+        <th><%= p.description %></th>
+
+      </tr>
+      <% end %>
+    </table>
+    </div>
+  </div>
+</div>

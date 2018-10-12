@@ -11,6 +11,7 @@
         <th>URL</th>
         <th>Descripcion</th>
         <th></th>
+        <th></th>
       </tr>
       <% @products.each do |p| %>
       <tr>
@@ -19,7 +20,7 @@
         <td><%= p.url %></td>
         <td><%= p.description %></td>
         <td><%= link_to "Editar", edit_product_path(p) %></td>
-
+        <td></td>
       </tr>
       <% end %>
     </table>

@@ -11,7 +11,7 @@
         <th>URL</th>
         <th>Descripcion</th>
         <th></th>
-        <th></th>
+
       </tr>
       <% @products.each do |p| %>
       <tr>
@@ -19,8 +19,8 @@
         <td><%= link_to p.name, p %></td>
         <td><%= p.url %></td>
         <td><%= p.description %></td>
-        <td><%= link_to "Editar", edit_product_path(p) %></td>
-        <td></td>
+        <td><%= link_to "Editar", edit_product_path(p) %>
+            <%= link_to "Eliminar", p, method: :delete, data: { confirm: "Esta seguro de eliminar este producto?"} %></td>
       </tr>
       <% end %>
     </table>
